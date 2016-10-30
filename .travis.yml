@@ -7,3 +7,4 @@ env:
     - DOTNET_CLI_TELEMETRY_OPTOUT: 1
 mono: none
 dotnet: 1.0.0-preview2-003121
+solution: ./DiscordRestApiLib/DiscordRestApiLib.sln
