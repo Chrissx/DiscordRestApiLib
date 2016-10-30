@@ -18,7 +18,7 @@ namespace DiscordRestApiLib.Data
         {
             if (a != null && a.A != null)
             {
-
+                a.A = +a.B; 
             }
         }
     }
