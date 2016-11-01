@@ -1,6 +1,7 @@
 {
   "buildOptions": {
-    "warningsAsErrors": true
+    "warningsAsErrors": true,
+    "copyToOutput": "dotnet-test-xunit"
   },
   "version": "1.0.0-*",
   "dependencies": {

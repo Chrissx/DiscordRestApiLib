@@ -1,6 +1,5 @@
 {
   "version": "1.0.0-*",
-
   "dependencies": {
     "SonarAnalyzer.CSharp": "1.19.0",
     "StyleCop.Analyzers": "1.0.0"
