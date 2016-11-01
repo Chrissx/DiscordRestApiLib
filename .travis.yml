@@ -2,7 +2,6 @@ language: csharp
 sudo: required
 dist: trusty
 addons:
-  sonarqube: true
   apt:
     packages:
     - gettext
@@ -13,7 +12,6 @@ addons:
     - zlib1g
 env:
   global:
-    - secure: "Py/DQxmVb73ybdZ8Ichjk6NUBfLepEw9EFE9b/raMieyMpHbLNxa5OD+2oLcJKvrbQgSnfA0wBQrER/BTwwj4bIXyYA3iwgtgt5LI/mnRjsB7N6IoX0I9kIfMCi7NlPdBX9ooa4S3Q4G8GOvPmE5J7lS5fRRnt3S6GfFKbNCVXsReX1Cj2xNQVylQehnfuI4xvEEVzzaL//54tCEmCSKg9AKmGjLkYHtnGxLaXD6V9usWd3NsmxNF+FmRX2Tyl1DL7pTiqoI2LcEyuZYavOlLhyHyVo9FlPBzWpSgu1WRYzn/0oOhJxLnKVWl0iuGZwBdUJJiMRocu7NRrj+01agEGJcxamUGa20LEhfW8pJsxDQGun0YrB1pz1pCzHMm1U5KK0lcYk75F54+24hA/3kTBaOig9fiiDzOCvO7j6cECr96KzVsha2wBs8rjvDV+v0WH6xxbhvUWwf5WmGrPMfUlAI9yCjoJLmOGG1WYTcCGg7QHF9v9iiRkYxtGvPo/CmaTNiO6Q7HLH4zXAwiI10mbT8xL6y73vd2RTFs4/XueM/4mNUtivzqkCF8TVlkqpyW3KyWtN1rvsID2++2Qr8HLIEg8XXPNEgvU4zTBWbSAozxEzpBlmVHb4q1Y/dlq0/hVOLrw/BelklmY2Br3IlZdJP00pnL6R+zGn6tLCNv44="
     - DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
     - DOTNET_CLI_TELEMETRY_OPTOUT: 1
 mono:
@@ -33,5 +31,3 @@ before_install:
   - chmod +x build.sh
 script:
   - ./build.sh --quiet verify
-  # other script steps might be done before running the actual SonarQube analysis
-  - sonar-scanner -Dsonar.login=$SONAR_TOKEN
